@@ -85,6 +85,12 @@ Now move into the new `protobuf` directory, configure it, and `make` it. _Note: 
 ```shell
 cd protobuf
 git checkout d5fb408d
+
+# if you get a gmock download error due to repository migration to github, download latest one from github repo.
+wget https://github.com/google/googletest/archive/release-1.8.0.zip
+tar xvzf release-1.8.0.zip
+ln -sv googletest-release-1.8.0 gmock
+
 ./autogen.sh
 ./configure --prefix=/usr
 make -j 4
